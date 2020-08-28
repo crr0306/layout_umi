@@ -1,0 +1,22 @@
+.right_header{
+    background-color:pink;
+    display: flex;
+    height: 100%;
+    /* width: 98%; */
+    margin-left: 5px;
+  
+}
+
+.action {
+    display: inline-block;
+    height: 100%;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+   
+}
+
+.search {
+    padding: 0 12px;
+    
+}

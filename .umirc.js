@@ -19,7 +19,10 @@ export default {
       dynamicImport: false,
       title: 'layout_umi',
       dll: false,
-      
+      locale: {
+        enable: true,
+        default: 'zh-CN',//'en-US',
+      },
       routes: {
         exclude: [
           /models\//,

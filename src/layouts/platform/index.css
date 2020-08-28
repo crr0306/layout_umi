@@ -1,0 +1,35 @@
+
+.whole_container {
+  min-height: 100vh;
+  background-color: springgreen;
+
+}
+
+.sider {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+}
+.right_content {
+  display: flex;
+  flex-direction: column;
+  background-color: mediumblue;
+  margin-left: 205px;
+}
+.contentHeader{
+  background-color:purple;
+  margin-bottom: 0px;
+  padding: 0px;
+  height: 54px;
+
+ 
+  
+}
+.mainContent{
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+
+}
+
+
