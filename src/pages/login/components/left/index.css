@@ -1,0 +1,46 @@
+.lg_cp_form{
+    display: flex;
+    width: 100%;
+   background-color: palegreen;
+    margin: 10px;
+   text-align: center;
+   justify-content: center;
+
+}
+.lg_first_content{
+    display: flex;
+    
+  
+}
+
+.lg_reset_button{
+    border-color: red;
+    border-radius: 8px;
+    background-color:white;
+    font-family:SimSun ;
+    color: red;
+
+
+}
+.lg_sencond_content{
+    display: flex;
+  
+
+}
+.lg_send_sms_button{
+   
+    border-color: white;
+    border-radius: 8px;
+    background-color:white;
+    font-family:SimSun ;
+    color: black;
+    /* padding: 0px 15px;
+    line-height: 29px; */
+
+}
+
+  .lg_submit_button{
+    margin-left: 90px;
+    align-items: center;
+
+}

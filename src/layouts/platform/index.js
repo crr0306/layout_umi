@@ -32,13 +32,13 @@ class PlatformLayout extends Component {
       router.push('/login?status=1');
       return;
     }
-    // 请求系统基本信息
-    dispatch({
-      type: 'global/getSysInfo',
-    });
-    dispatch({
-      type: 'global/getMessage',
-    });
+    // // 请求系统基本信息
+    // dispatch({
+    //   type: 'global/getSysInfo',
+    // });
+    // dispatch({
+    //   type: 'global/getMessage',
+    // });
     dispatch({
       type: 'menu/getMenuData',
     });
@@ -52,7 +52,6 @@ class PlatformLayout extends Component {
       <Layout className={styles.whole_container}>
         {/* 左边 */}
         <Sider className={styles.sider}>
-          
           左边
         </Sider>
         {/* 右边 */}

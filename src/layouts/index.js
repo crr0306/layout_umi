@@ -1,12 +1,22 @@
-import styles from './index.css';
 
-function BasicLayout(props) {
-  return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to umi!</h1>
-      {props.children}
-    </div>
-  );
+import LoginLayout from './login'
+import PlatformLayout from './platform';
+function globalLayout(props) {
+  const { location, children } = props;
+  const { pathname } = location;
+  if (pathname === '/' ||
+    pathname === '/login' ||
+    pathname === '/register' ||
+    /^\/initialize/.test(pathname) ||
+    /^\/exception/.test(pathname)
+  ) {
+    return (
+      <LoginLayout>{children}</LoginLayout>
+    );
+  }
+  console.log("PlatformLayout");
+  return (<PlatformLayout {...props}>{children}</PlatformLayout>);
+
 }
 
-export default BasicLayout;
+export default globalLayout;

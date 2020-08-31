@@ -22,9 +22,6 @@ class loginLayout extends Component {
          
           </div>
         </div>
-
-
-
       </Layout>
     );
   }

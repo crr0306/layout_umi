@@ -11,7 +11,6 @@ class RightHeader extends PureComponent {
     return (
       <div  className={styles.right_header}>
          右边头部分
-
       </div>
 
     );
