@@ -8,7 +8,8 @@ export default {
       component: '../layouts/index',
       routes: [
         { path: '/', component: '../pages/index' },
-        { path: '/login', component: '../pages/login/index' }
+        { path: '/login', component: '../pages/login/index' },
+        { path: '/sys', component: '../pages/sys/index' }
       ]
     }
   ],
@@ -18,7 +19,7 @@ export default {
       antd: true,
       dva: true,
       dynamicImport: false,
-      title: 'base_umi',
+      title: 'login_umi',
       dll: false,
       locale: {
         enable: true,
@@ -35,4 +36,11 @@ export default {
       },
     }],
   ],
+  proxy: {
+    "/api": {
+      target: "http://localhost:8081/",
+      changeOrigin: true,
+      pathRewrite: { "^/api": "gl" }
+    }
+  },
 }

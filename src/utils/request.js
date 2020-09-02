@@ -43,10 +43,10 @@ const errorHandler = error => {
     return response;
 };
 const request = extend({
-    prefix: '',
+    prefix: '/api',
     errorHandler,
     // 默认错误处理
-    credentials: 'same-origin', // 默认请求是否带上cookie
+    //credentials: 'same-origin', // 默认请求是否带上cookie
 
 });
 
@@ -96,11 +96,12 @@ const checkIsLogin = (url) => {
     }
 };
 const checkStatus = response => {
-    console.log("checkStatus");
+    console.log("response:",response);
     const { status } = response;
     if (status >= 200 && status < 300) {
         return response;
     }
+    //status异常
     const errortext = codeMessage[response.status] || response.statusText;
     notification.error({
         message: `请求错误 ${response.status}: ${response.url}`,
@@ -116,10 +117,6 @@ request.interceptors.response.use((response, options) => {
     
     console.log("response.interceptors");
     checkStatus(response);
-    let token = response.headers.get("x-auth-token");
-    if (token) {
-        localStorage.setItem("x-auth-token", token);
-    }
     return response;
 });
 

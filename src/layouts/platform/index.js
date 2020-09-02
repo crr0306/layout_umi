@@ -39,9 +39,9 @@ class PlatformLayout extends Component {
     // dispatch({
     //   type: 'global/getMessage',
     // });
-    dispatch({
-      type: 'menu/getMenuData',
-    });
+    // dispatch({
+    //   type: 'menu/getMenuData',
+    // });
 
   }
   render() {

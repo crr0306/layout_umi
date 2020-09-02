@@ -1,0 +1,24 @@
+.login{
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  align-items: center;
+
+ }
+
+.login_title{
+  margin: 50px;
+  text-align: center;
+  background-color: red;
+ 
+}
+
+
+.login_content{
+  /*不起效果，效果在子组件中*/
+  background-color: orange;
+
+ 
+}
+
+

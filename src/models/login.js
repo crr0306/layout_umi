@@ -9,20 +9,38 @@ export default {
   },
   effects: {
     *login({ payload }, { call, put, select }) {
-      console.log("login in model");
-      console.log("payload",payload);
+      console.log("payload in login ", payload);
       const { password, ...rest } = payload;
-      const { status } = yield call(api.login, { password, ...rest });
-      if (status === 0) {
+      const response = yield call(api.login, { password, ...rest });
+      console.log("result:",response);
+      const{token,returnCode}=response;
+      console.log("returnCode",returnCode);
+      if (parseInt(returnCode) === 200) {
+        console.log("if");
         sessionStorage.setItem("isLogin", true);
-        Cookies.set('token', 'crr');
+        Cookies.set('token', token);
+        console.log("token:",Cookies.get('token'));
         //登录成功后跳转页面
         yield put(routerRedux.push('/sys'));
+      } else {
+        console.log("else");
+        yield put({
+          type: 'save',
+          payload: {
+            isError: true
+          }
+        });
+        notification.error({
+          message: '用户名或密码错误，请重新登录。',
+        });
       }
-      //yield call(doSomethingFunc, parameter);
-      //const data = yield select(state => state.data);
-      //yield put({ type: 'fetch', payload: { page } });
 
+
+    },
+    reducers: {
+      save(state, action) {
+        return { ...state, ...action.payload };
+      },
     },
   },
 }

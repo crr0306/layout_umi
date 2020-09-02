@@ -19,4 +19,10 @@ http://caibaojian.com/react/component-lifecycle.html
 20200828
 
 export default function()和class A enxtends
+
+
+20200902 跨域
+1、https://blog.csdn.net/SherrybabyOne/article/details/89439345
+2、https://blog.csdn.net/qq_45301392/article/details/102974301
+
 目标：基于umi实现主菜单内容，完成页面布固定部分（左菜单、头、尾），以及动态变化部门content
